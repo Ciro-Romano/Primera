@@ -1,2 +1,65 @@
-!!!!
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>--Inicio--</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
+        .botonera {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .boton {
+            background-color: #00b0ff;
+            border: 3px solid #0088cc;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 200px;
+        }
+
+        .boton:hover {
+            background-color: #0088cc;
+            transform: scale(1.1);
+        }
+
+        .boton:active {
+            background-color: #006fa1;
+            transform: scale(1);
+        }
+
+        .boton:focus {
+            outline: none;
+        }
+
+        .boton:before {
+            content: "▶ ";
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="botonera">
+        <button class="boton" onclick="window.location.href='{% url 'Gato' %}'">Gato espacial</button>
+        <button class="boton" onclick="window.location.href='#'">Opciones</button>
+        <button class="boton" onclick="window.location.href='#'">Salir</button>
+    </div>
+</body>
+</html>
